@@ -39,6 +39,8 @@ public class AlunoService {
 
     public void adicionarAluno(AlunoDTO alunoDTO) {
         AlunoModel alunoModel = alunoMapper.toEntity(alunoDTO);
+        CursoModel cursoModel = verificaCurso(alunoDTO.getCursoId());
+        alunoModel.setCurso(cursoModel);
         alunoRepository.save(alunoModel);
     }
 
