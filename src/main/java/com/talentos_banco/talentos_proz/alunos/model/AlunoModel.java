@@ -12,9 +12,9 @@ public class AlunoModel {
     @Column(name = "id_aluno")
     private Long id;
 
-    @Column(name = "nome")
+    @Column(name = "nome_completo")
     private String nome;
-    
+
     @Column(name = "idade")
     private int idade;
 
@@ -22,7 +22,7 @@ public class AlunoModel {
     private String descricao;
 
     @Column(name = "telefone")
-    private int telefone;
+    private String telefone;
 
     @Column(name = "email")
     private String email;
@@ -32,6 +32,18 @@ public class AlunoModel {
 
     @Column(name = "data_formatura")
     private String dataFormatura;
+
+    @Column(name = "habilidade_1")
+    private String habilidade1;
+
+    @Column(name = "habilidade_2")
+    private String habilidade2;
+
+    @Column(name = "habilidade_3")
+    private String habilidade3;
+
+    @Column(name = "link_image")
+    private String imagem;
 
     @ManyToOne
     @JoinColumn(name = "id_curso")
