@@ -10,7 +10,7 @@ public class AlunoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_aluno")
-    private Long id;
+    private Long idAluno;
 
     @Column(name = "nome_completo")
     private String nome;
