@@ -15,11 +15,6 @@ public class AlunoDTO {
     @Size(min = 2, max = 20, message = "O nome tem que ser entre 2 a 20 caracteres.")
     private String nome;
 
-    @NotBlank(message = "Sobrenome não pode esta em branco.")
-    @Size(min = 2, max = 20, message = "O sobrenome tem que ser entre 2 a 20 caracteres.")
-    private String sobrenome;
-
-
     @Min(value = 15, message = "A idade deve ser maior que 15 anos.")
     @Max(value = 70, message = "A idade deve ser menor que 70 anos.")
     private int idade;
