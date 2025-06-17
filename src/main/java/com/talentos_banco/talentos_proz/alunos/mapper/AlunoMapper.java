@@ -12,7 +12,6 @@ public class AlunoMapper {
 
         alunoDTO.setId(alunoModel.getId());
         alunoDTO.setNome(alunoModel.getNome());
-        alunoDTO.setSobrenome(alunoModel.getSobrenome());
         alunoDTO.setIdade(alunoModel.getIdade());
         alunoDTO.setDescricao(alunoModel.getDescricao());
         alunoDTO.setTelefone(alunoModel.getTelefone());
@@ -31,7 +30,6 @@ public class AlunoMapper {
         AlunoModel alunoModel = new AlunoModel();
 
         alunoModel.setNome(alunoDTO.getNome());
-        alunoModel.setSobrenome(alunoDTO.getSobrenome());
         alunoModel.setIdade(alunoDTO.getIdade());
         alunoModel.setDescricao(alunoDTO.getDescricao());
         alunoModel.setTelefone(alunoDTO.getTelefone());
@@ -45,7 +43,6 @@ public class AlunoMapper {
     public void updateEntity(AlunoModel alunoModel, AlunoDTO alunoDTO) {
 
         alunoModel.setNome(alunoDTO.getNome());
-        alunoModel.setSobrenome(alunoDTO.getSobrenome());
         alunoModel.setIdade(alunoDTO.getIdade());
         alunoModel.setDescricao(alunoDTO.getDescricao());
         alunoModel.setTelefone(alunoDTO.getTelefone());
