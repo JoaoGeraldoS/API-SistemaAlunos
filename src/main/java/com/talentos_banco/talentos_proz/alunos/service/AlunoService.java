@@ -76,7 +76,7 @@ public class AlunoService {
         List<AlunoModel> alunoModels = alunoRepository.findAll();
 
         return alunoModels.stream()
-                .filter(a -> nome == null || a.getNome().equalsIgnoreCase(nome))
+                .filter(a -> nome == null || a.getNome().contains(nome))
                 .filter(a -> dataFormatura == null || a.getDataFormatura().contains(dataFormatura))
                 .map(alunoMapper::toDTO).collect(Collectors.toList());
     }
