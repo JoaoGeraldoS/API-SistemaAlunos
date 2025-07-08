@@ -49,7 +49,7 @@ public class AlunoController {
 
     // FILTROS
 
- @GetMapping("/aluno/filter")
+    @GetMapping("/aluno/filter")
     public ResponseEntity<AlunoDTO> buscarAluno(
             @RequestParam(value = "nome", required = false) String nome){
 
