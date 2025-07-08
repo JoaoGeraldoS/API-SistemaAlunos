@@ -69,7 +69,7 @@ public class AlunoService {
     public AlunoDTO buscaUnicoAluno(String nome) {
         AlunoModel alunoModel = alunoRepository.findBynome(nome)
                 .orElseThrow(() -> new NaoEncontrado("Aluno não encontrado"));
-        return AlunoMapper.toDTO(alunoModel);
+        return alunoMapper.toDTO(alunoModel);
     }
 
     public List<AlunoDTO> filterAluno(String nome, String dataFormatura) {
@@ -78,6 +78,6 @@ public class AlunoService {
         return alunoModels.stream()
                 .filter(a -> nome == null || a.getNome().equalsIgnoreCase(nome))
                 .filter(a -> dataFormatura == null || a.getDataFormatura().contains(dataFormatura))
-                .map(AlunoMapper::toDTO).collect(Collectors.toList());
+                .map(alunoMapper::toDTO).collect(Collectors.toList());
     }
 }
