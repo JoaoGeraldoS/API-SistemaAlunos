@@ -12,6 +12,7 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/api/**")
                 .allowedOrigins("http://localhost:8080")
                 .allowedOrigins("http://127.0.0.1:5500/")
+                .allowedOrigins("https://talentosproz.com.br/")
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedHeaders("*");
     }
